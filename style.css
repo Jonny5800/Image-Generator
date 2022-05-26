@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.fa-solid,
+fa-camera {
+    color: orange;
+}
+
+.fa-solid,
+fa-magnifying-glass {
+    color: blue;
+}
