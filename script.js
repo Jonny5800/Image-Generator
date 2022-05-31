@@ -45,7 +45,22 @@ function loadImg() {
             // The status will say why the respose as unsuccessful
     })
 
-    .then
+    // BELOW - another promise ( .then(data=>....)). This returns the data. This will display the data on the screen.
+    //FIrstly is will go into the imageNodes Array
+    .then(data => {
+        const imageNodes = [];
+        for (let i = 0; i < data.results.length; i++) {
+            imageNodes[i] = document.createElement("div");
+            imageNodes[i].className = "img";
+            imageNodes[i].style.backgroundImage = "url(" + data.results[i].urls.raw + ")";
+            imageNodes[i].addEventListener("dblclick", function() {
+                window.open(data.results[i].links.download, "_blank");
+            })
+            grid.appendChild(imageNodes[i]);
+            /*^^^^Uncaught (in promise) TypeError: grid.appendChild is not a function
+    at script.js:59:18*/
+        }
+    })
 
 }
 
