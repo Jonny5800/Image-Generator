@@ -48,7 +48,7 @@ header {
     padding: 8px;
     border-radius: 25px;
     outline: none;
-    /*code for animation below and may now work since its pure copies*/
+    /*code for animation below and may now work since its pure copied - search these for understanding*/
     -webkit-transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
@@ -74,7 +74,7 @@ input:focus {
     top: 25%;
     right: 4%;
     /*So that it changes color when hovering over it*/
-    transition: 1.5s;
+    transition: 0.5s;
 }
 
 .search-box i:hover {
